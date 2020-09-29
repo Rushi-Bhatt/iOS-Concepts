@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios'>
+    <pages>
+        <page name='Generics+Protocols'/>
+        <page name='MemoryManagement+Types'/>
+        <page name='General Questions'/>
+        <page name='DesingPatterns+Architecture'/>
+        <page name='Concurrency'/>
+        <page name='Algorithms'/>
+        <page name='Testing'/>
+        <page name='Functions'/>
+        <page name='Closures'/>
+        <page name='Enumerations+Switch'/>
+        <page name='Properties+Methods'/>
+        <page name='Protocol+Inheritance'/>
+        <page name='Sequences+Collection'/>
+    </pages>
+</playground>
