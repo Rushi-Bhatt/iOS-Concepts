@@ -20,5 +20,8 @@ func removeDuplicates(_ nums: inout [Int]) -> Int {
     return stPoint + 1
 }
 
+var nums = [0,0,1,1,1,2,2,3,3,4]
+var ans = removeDuplicates(&nums)
+print(nums)
 
 //Check if Binary tree is BST or not?

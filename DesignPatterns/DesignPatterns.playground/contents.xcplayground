@@ -4,5 +4,9 @@
         <page name='MVC'/>
         <page name='Delegation'/>
         <page name='Strategy'/>
+        <page name='Singleton'/>
+        <page name='Memento'/>
+        <page name='Observer'/>
+        <page name='Builder'/>
     </pages>
 </playground>
