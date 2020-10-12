@@ -8,5 +8,9 @@
         <page name='Memento'/>
         <page name='Observer'/>
         <page name='Builder'/>
+        <page name='MVVM'/>
+        <page name='Factory'/>
+        <page name='Adapter'/>
+        <page name='Iterator'/>
     </pages>
 </playground>
