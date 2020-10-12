@@ -12,5 +12,6 @@
         <page name='Factory'/>
         <page name='Adapter'/>
         <page name='Iterator'/>
+        <page name='Prototype'/>
     </pages>
 </playground>
