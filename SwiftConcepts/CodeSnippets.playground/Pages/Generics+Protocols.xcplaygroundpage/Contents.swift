@@ -30,10 +30,10 @@ struct Pair<Element> {
 }
 
 // 1) Make struct conform to Hashable and Codeable if the Elements conform to the same
-// 2) Define a generic protocol "Orderable" with min(), max() and sorted() function and make the above struct conform to that.
+// 1) Define a generic protocol "Orderable" with min(), max() and sorted() function and make the above struct conform to that.
 // min function will return min of first or second
 // max will return max of first or second
-// sorted will return Pair(first, second) or  Pair(second, first) based on sorted order
+// sorted will return Pair(first: first, second: second) or  Pair(first: second, second: first) based on sorted order
 
 // ----------------------------------------------------------- //
 //A2)

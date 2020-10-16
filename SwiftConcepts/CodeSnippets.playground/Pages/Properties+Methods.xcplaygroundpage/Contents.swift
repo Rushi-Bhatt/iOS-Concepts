@@ -81,3 +81,5 @@ enum Maths {
 //computed properties vs methods:
 //Extensive computation or DB Access -> Yes, Method ;  No -> ComputedProperty
 //Comoputatiuon requiring multiple parameters: Method, if not, then ComputerProperty
+
+
