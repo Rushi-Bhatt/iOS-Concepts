@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true'>
+    <pages>
+        <page name='SlidingWindow'/>
+        <page name='DP'/>
+        <page name='Knapsack'/>
+        <page name='0-1-Knapsack-related'/>
+        <page name='Unbounded-Knapsack-related'/>
+        <page name='LCSubsequence'/>
+        <page name='LCSubstring'/>
+        <page name='MCM'/>
+        <page name='Stack'/>
+        <page name='BinarySearch'/>
+        <page name='Recursion'/>
+    </pages>
+</playground>
