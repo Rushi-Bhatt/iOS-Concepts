@@ -39,11 +39,11 @@ extension String {
  while j < n {
  // calculation based on j
  ...
- if j-i+1 < n {
+ if j-i+1 < k {
  // Increase Window Size
  j ++
  }
- else if j-i+1 == n {
+ else if j-i+1 == k {
  // Find ans from calculation
  ...
  //Remove calculation of i from ans
@@ -351,6 +351,9 @@ func largestSubarray(of array: [Int], with k: Int) -> Int {
         // Removing ith element from window till we meet the condition
         sum -= array[i]
         i += 1
+          
+        // handle for "if sum == k" in case of [1,1,1] and k=2
+          
       }
       // Now sum is <=k again, time to consider next element
       j += 1
@@ -512,6 +515,40 @@ func LongestSubstringWithNoRepeat(of s: String) -> Int {
 
 LongestSubstringWithNoRepeat(of: "aabacbebebe")
 
+/*
+Same as above but with Set
+*/
+
+func uniqueCharactersCount(_ s: String) -> Int {
+    return Set(s).count
+}
+func lengthOfLongestSubstringWithNoRepeat(_ s: String) -> Int {
+    guard !s.isEmpty else { return 0 }
+    var str = ""
+    var i = 0
+    var j = 0
+    var n = s.count
+    var ans = 0
+    while j < n {
+        str = str + String(s[j])
+        if uniqueCharactersCount(str) > j - i + 1 {
+            // Not possible
+            j += 1
+        } else if uniqueCharactersCount(str) == j - i + 1  {
+            // Found a candidate
+            ans = max(ans, str.count)
+            j += 1
+        } else if uniqueCharactersCount(str) < j - i + 1 {
+            while uniqueCharactersCount(str) < j - i + 1 {
+                str.removeFirst()
+                i += 1
+            }
+            j += 1
+        }
+    }
+    return ans
+}
+
 /* Pick Toys:
  Given an array arr[ ] of length N consisting N toys and an integer K depicting
  the unique toys you can pick. Your task is to find maximum number of toys you can pick. Toys need to be picked up in sequence
@@ -544,15 +581,9 @@ func minimumWindowSubstring(of s: String, with t: String) -> String {
   var i = 0
   var j = 0
   var final = 0
-  var map: [Character: Int] = [:]
   var ans = Int.max
-  t.forEach { (char) in
-    if let freq = map[char] {
-      map[char] = freq + 1
-    } else {
-      map[char] = 1
-    }
-  }
+  var mappedItems = t.map { ($0, 1) }
+  var map: [Character: Int] = Dictionary(mappedItems, uniquingKeysWith: +)
   
   while j < n {
     //Calculation for j

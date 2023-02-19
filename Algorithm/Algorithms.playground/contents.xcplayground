@@ -12,5 +12,13 @@
         <page name='Stack'/>
         <page name='BinarySearch'/>
         <page name='Recursion'/>
+        <page name='Blind75'/>
+        <page name='Uber'/>
+        <page name='BackTracking'/>
+        <page name='Grind75'/>
+        <page name='Trial'/>
+        <page name='Dropbbox'/>
+        <page name='Expedia'/>
+        <page name='Leetcode-Medium'/>
     </pages>
 </playground>

@@ -389,7 +389,7 @@ so all subsequences, for ab
  so they both match, subset will have some more entries, but if we assume that order doesnt matter, then it becomes the same as subsequnce
  
 */
-func printSunsets(str: String) {
+func printSubsets(str: String) {
   guard !str.isEmpty else {
     print(" ")
     return
@@ -414,7 +414,7 @@ func solveSubsets(ip: String, op: String) {
   solveSubsets(ip: ip, op: op2)
 }
 
-printSunsets(str: "ab")
+printSubsets(str: "ab")
 
 /* Problem 9: print unique subset:
 Same as above, but we will use set to store the ans, so we only get unique subsets

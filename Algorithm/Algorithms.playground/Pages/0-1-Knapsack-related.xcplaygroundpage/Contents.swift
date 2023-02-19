@@ -102,7 +102,7 @@ Output: 1
  
 Explanation: let say that 2 partitions are p1 and p2 with sum s1 and s2, so s1+s2 = total sum of entire set, and |s1 - s2| is minimum
 Now each s1 and s2 are in range 0..S where S = s1+s2
-so, s1 and s2 need to be on the opposite side of the center point(being S/2), and tha too as close as possible. Example, if S = 10, then, s1 and s2 will be on opposite sides of 5 ( or 5 each), and as close to 5 as possible (i.e 5,5 or 4,6 or 3,7)
+so, s1 and s2 need to be on the opposite side of the center point(being S/2), and that too as close as possible. Example, if S = 10, then, s1 and s2 will be on opposite sides of 5 ( or 5 each), and as close to 5 as possible (i.e 5,5 or 4,6 or 3,7)
 Now, all s1/s2 values can't be possible, because we can only produce finite sum values from given set. i.e {1, 6, 5, 11} set can produce sum 2, 3, 4, 8 and so on.
 So we need to find the closest possible value from the half point, and that will be our s1. And S-s1 will be our s2.
 so diff = s2 - s1 = (S - s1) - s1 = S - 2s1

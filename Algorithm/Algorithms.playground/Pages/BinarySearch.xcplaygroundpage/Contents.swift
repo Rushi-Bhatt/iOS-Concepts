@@ -153,10 +153,10 @@ func numberOfRotations(for arr: [Int]) -> Int {
       // found the min. element at mid
       return arr.count - mid
       // or return mid for anticlock rotations
-    } else if arr[start] >= arr[mid] {
+    } else if arr[0] >= arr[mid] {
       // Unsorted array on left, seach only in that
       end = mid - 1
-    } else if arr[mid] >= arr[end] {
+    } else if arr[mid] >= arr[arr.count-1] {
       // Unsorted array on right, seach only in that
       start = mid + 1
     }
