@@ -87,7 +87,7 @@ struct Heap<Element: Equatable> {
   
   mutating func remove(at index: Int) -> Element? {
     guard index < count, index > 0 else { return nil }
-    if index != count - 1 {
+    if index == count - 1 {
       return elements.removeLast()
     } else {
       elements.swapAt(index, count - 1)

@@ -53,7 +53,7 @@ game1.lostLife()
 game1.scoreSomePoints()
 game1.state.score
 game1.state.attemptsRemaining
-gameSystem.save(game1, title: "Game 1: Rushi")
+try gameSystem.save(game1, title: "Game 1: Rushi")
 
 let game2 = Game()
 game2.state.score

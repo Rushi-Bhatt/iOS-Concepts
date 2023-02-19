@@ -1,7 +1,7 @@
 import Foundation
 
 //MARK:- Protocol Copying
-public protocol Copying: class {
+public protocol Copying: AnyObject {
   // Required Copy initiazer
   init(_ prototype: Self)
 }

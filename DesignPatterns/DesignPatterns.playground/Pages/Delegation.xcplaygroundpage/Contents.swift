@@ -6,7 +6,7 @@ import UIKit
 //  Here MenuViewController also acts as a delegate for TableView
 
 // Notice how for the delegate protocol methods, its always a standard to have the object itself as the first parameter
-public protocol MenuViewControllerDelegate: class {
+public protocol MenuViewControllerDelegate: AnyObject {
   func menuViewController(_ menuViewController: MenuViewController, didSelectItemAtIndex index: Int)
 }
 

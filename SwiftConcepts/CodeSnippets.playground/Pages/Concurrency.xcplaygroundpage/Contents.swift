@@ -45,4 +45,44 @@ import Foundation
 //Using concurrent queues with barriers helps us improve and speed up our code while eliminating the readers-writers problem
 //Make writing task as barrier task so it will only be done on seril queue
 
+let serialQueue = DispatchQueue(label: "serialQueueSample")
+serialQueue.async {
+    print("serialQueueSample - 1")
+}
+serialQueue.sync {
+    sleep(1)
+    print("serialQueueSample - 2")
+}
+serialQueue.sync {
+    print("serialQueueSample - 3")
+}
+serialQueue.sync {
+    print("serialQueueSample - 4")
+}
 
+func ambiguous() -> Int { 5 }
+func ambiguous() -> String { "Fildo" }
+
+(ambiguous as () -> String)()
+
+let concurrentQueue = DispatchQueue(label: "concurrentQueueSample", attributes: .concurrent)
+  concurrentQueue.async {
+    print("concurrentQueueSample - 1")
+  }
+  concurrentQueue.async {
+    sleep(2)
+    print("concurrentQueueSample - 2")
+  }
+  concurrentQueue.async {
+    sleep(1)
+    print("concurrentQueueSample - 3")
+  }
+  concurrentQueue.async {
+    print("concurrentQueueSample - 4")
+  }
+
+class LZPRPTTrick {
+    let first = "Patrick"
+    let last = "Chase"
+    lazy var full = first + last // Illegal
+}

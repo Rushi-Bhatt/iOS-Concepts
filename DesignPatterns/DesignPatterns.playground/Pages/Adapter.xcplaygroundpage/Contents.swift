@@ -18,7 +18,7 @@ public struct GoogleUser {
 }
 
 //MARK:- New protocol
-// To make the authenticator service more generalized, and in future, replace it with Gitgub or Apple authentication instead of Google authentication, if required
+// To make the authenticator service more generalized, and in future, replace it with Github or Apple authentication instead of Google authentication, if required
 public protocol AuthenticatorService {
   func login(email: String,
                     password: String,

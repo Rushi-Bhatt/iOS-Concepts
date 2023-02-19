@@ -3,7 +3,7 @@
     <pages>
         <page name='BinaryTree'/>
         <page name='BinarySearch'/>
-        <page name='Heap'/>
-        <page name='PriorityQueue'/>
+        <page name='Heap+PriorityQueue'/>
+        <page name='Graph'/>
     </pages>
 </playground>
